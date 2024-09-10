@@ -1,96 +1,233 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Congregación Cañaveral</title>
-    <!-- Enlace a Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Enlace a tu propio archivo CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="website icon" href="images/logo-redondo.png" type="image/png">
-</head>
-<body>
-    <!-- Navegación y Logo -->
-    <nav class="navbar">
-        <div class="menu-toggle" id="mobile-menu">
-            <div class="menu-icon"></div>
-            <div class="menu-icon"></div>
-            <div class="menu-icon"></div>
-        </div>
-        <!-- Imagen centrada -->
-        <div class="navbar-logo">
-            <img src="images/logo-y-nombre.png" alt="Logo y Nombre">
-        </div>
-    </nav>
+/* Tipografía y Estilos Generales */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FDFDFC; /* Fondo general de la página */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Color de texto general */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima de la página */
+}
 
-    <!-- Menú Desplegable -->
-    <div class="menu" id="navbarMenu">
-        <ul class="menu-list">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Reunión entre semana</a></li>
-            <li><a href="#">Reunión fin de semana</a></li>
-            <li><a href="#">Acomodadores</a></li>
-            <li><a href="#">Micrófonos Móviles</a></li>
-            <li><a href="#">Salidas a predicar</a></li>
-            <li><a href="#">Lista de grupos</a></li>
-            <li><a href="#">Lista de aseo</a></li>
-            <li><a href="#">Asistencia a las reuniones</a></li>
-            <li><a href="#">Reunión de Zoom</a></li>
-            <li><a href="#">Fotos para descargar</a></li>
-        </ul>
-    </div>
+/* Estilos del Contenido Principal */
+main {
+    flex: 1; /* El contenido principal se expande para llenar el espacio disponible */
+    padding: 20px;
+}
 
-    <!-- Contenido Principal -->
-    <main>
-    <!-- Apartado de Fechas Importantes -->
-    <section class="container text-center my-4">
-        <div class="important-dates">
-            <h4 class="text-secondary mb-4">Fechas Importantes</h4>
-            <div class="list-group list-group-flush">
-                <div class="list-group-item d-flex justify-content-between align-items-center">
-                    <div class="event-details">
-                        <span>Evento 1 - Fecha</span>
-                    </div>
-                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Evento+1&dates=20240915T120000Z/20240915T130000Z&details=Descripción+del+evento&location=Ubicación+del+evento" target="_blank" class="btn btn-calendar btn-sm">
-                        Agregar al Calendario
-                    </a>
-                </div>
-                <div class="list-group-item d-flex justify-content-between align-items-center">
-                    <div class="event-details">
-                        <span>Evento 2 - Fecha</span>
-                    </div>
-                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Evento+2&dates=20240916T120000Z/20240916T130000Z&details=Descripción+del+evento&location=Ubicación+del+evento" target="_blank" class="btn btn-calendar btn-sm">
-                        Agregar al Calendario
-                    </a>
-                </div>
-                <div class="list-group-item d-flex justify-content-between align-items-center">
-                    <div class="event-details">
-                        <span>Evento 3 - Fecha</span>
-                    </div>
-                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Evento+3&dates=20240917T120000Z/20240917T130000Z&details=Descripción+del+evento&location=Ubicación+del+evento" target="_blank" class="btn btn-calendar btn-sm">
-                        Agregar al Calendario
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-        
-        <!-- Apartado de Hora y Fecha Actual -->
-        <section class="text-center py-3" id="fecha-hora">
-            <h4 class="text-secondary">Fecha & Hora</h4>
-            <p id="hora-actual" class="lead text-dark"></p>
-        </section>
-    </main>
+/* Estilos del footer fijo */
+.footer {
+    background-color: #4A6DA7;
+    color: #ffffff;
+    padding: 15px 0; /* Espaciado mejorado */
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: 0; /* Posiciona el footer en la parte inferior de la pantalla */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    z-index: 10; /* Asegura que el footer esté encima de otros elementos */
+}
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>Congregación Cañaveral</p>
-        <p>Contacto: <a href="mailto:correodecontacto.cc@gmail.com" class="text-white">correodecontacto.cc@gmail.com</a></p>
-    </footer>
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
 
-    <!-- Scripts de JavaScript -->
-    <script src="scripts.js"></script>
-</body>
-</html>
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    background-color: #4A6DA7;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo para el contenedor de la imagen */
+.navbar-logo {
+    flex-grow: 1; /* Toma el espacio disponible */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    position: absolute;
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición para centrar */
+}
+
+/* Imagen del logo */
+.navbar-logo img {
+    max-width: 200px; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* Estilos para el menú */
+.menu-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 10px; /* Posiciona el menú a la izquierda */
+    top: 10px;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-icon::before {
+    top: -10px;
+}
+
+.menu-icon::after {
+    top: 10px;
+}
+
+/* Menú Desplegable */
+.menu {
+    display: none; /* Oculto por defecto */
+    background-color: #4A6DA7;
+    position: absolute;
+    top: 60px; /* Ajusta la posición si es necesario */
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    border-bottom: 1px solid #ffffff;
+}
+
+.menu-list a {
+    display: block;
+    padding: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px; /* Tamaño de fuente consistente */
+}
+
+.menu-list a:hover {
+    background-color: #3a5f8f;
+}
+
+/* Apartado de Hora y Fecha Actual */
+#fecha-hora {
+    background-color: #ffffff;
+    padding: 20px; /* Espaciado mejorado */
+    border-radius: 8px; /* Bordes más redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 90%; /* Ajusta el ancho */
+    max-width: 600px; /* Limita el ancho máximo */
+    margin: 20px auto; /* Centra el elemento */
+    text-align: center; /* Centra el texto */
+}
+
+#fecha-hora h4 {
+    font-size: 18px; /* Tamaño del título */
+    color: #4A6DA7; /* Color del texto del título */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+#fecha-hora p {
+    font-size: 14px; /* Tamaño del texto de la fecha y hora */
+    color: #333; /* Color del texto */
+}
+
+/* Apartado de Fechas Importantes */
+.important-dates {
+    background-color: #ffffff;
+    padding: 20px; /* Espaciado del recuadro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 90%; /* Ajusta el ancho */
+    max-width: 600px; /* Limita el ancho máximo */
+    margin: 20px auto; /* Centra el recuadro */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.important-dates h4 {
+    font-size: 18px; /* Tamaño del título */
+    color: #4A6DA7; /* Color del texto del título */
+    margin-bottom: 15px; /* Espacio debajo del título */
+    text-align: center; /* Centra el texto */
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between; /* Espacio entre eventos y botones */
+    align-items: center; /* Centra verticalmente los elementos */
+    border: none; /* Quitar bordes si es necesario */
+    padding: 10px 15px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espacio entre eventos */
+    background-color: #f8f9fa; /* Fondo de cada ítem */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.event-details {
+    font-size: 14px; /* Tamaño del texto del evento */
+    color: #333; /* Color del texto del evento */
+}
+
+.btn-calendar {
+    background-color: #4A6DA7; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none;
+    padding: 8px 16px; /* Espaciado del botón */
+    font-size: 14px; /* Tamaño de fuente del botón */
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados del botón */
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-calendar:hover {
+    background-color: #4a6ea78e; /* Color de fondo del botón en hover */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu {
+        top: 50px; /* Ajusta la posición del menú en pantallas pequeñas */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        position: relative;
+        left: auto;
+        top: auto;
+    }
+}
