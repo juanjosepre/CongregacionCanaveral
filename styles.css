@@ -5,6 +5,15 @@ body {
     margin: 0;
     padding: 0;
     color: #333; /* Color de texto general */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima de la página */
+}
+
+/* Estilos del Contenido Principal */
+main {
+    flex: 1; /* El contenido principal se expande para llenar el espacio disponible */
+    padding: 20px;
 }
 
 /* Estilos de la barra de navegación */
@@ -114,6 +123,7 @@ body {
     padding: 15px 0; /* Espaciado mejorado */
     text-align: center;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-top: auto; /* Empuja el footer al final */
 }
 
 .footer a {
@@ -198,11 +208,6 @@ body {
 
 .btn-calendar:hover {
     background-color: #4a6ea78e; /* Color de fondo del botón en hover */
-}
-
-/* Estilos para el contenido principal */
-main {
-    padding: 20px;
 }
 
 /* Ajustes para pantallas pequeñas */
