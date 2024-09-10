@@ -1,0 +1,215 @@
+/* Tipografía y Estilos Generales */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FDFDFC; /* Fondo general de la página */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Color de texto general */
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    background-color: #4A6DA7;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Estilos para el menú */
+.menu-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-icon::before {
+    top: -10px;
+}
+
+.menu-icon::after {
+    top: 10px;
+}
+
+/* Menú Desplegable */
+.menu {
+    display: none; /* Oculto por defecto */
+    background-color: #4A6DA7;
+    position: absolute;
+    top: 60px; /* Ajusta la posición si es necesario */
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    border-bottom: 1px solid #ffffff;
+}
+
+.menu-list a {
+    display: block;
+    padding: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px; /* Tamaño de fuente consistente */
+}
+
+.menu-list a:hover {
+    background-color: #3a5f8f;
+}
+
+/* Estilos del footer */
+.footer {
+    background-color: #4A6DA7;
+    color: #ffffff;
+    padding: 15px 0; /* Espaciado mejorado */
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Apartado de Hora y Fecha Actual */
+#fecha-hora {
+    background-color: #ffffff;
+    padding: 20px; /* Espaciado mejorado */
+    border-radius: 8px; /* Bordes más redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 90%; /* Ajusta el ancho */
+    max-width: 600px; /* Limita el ancho máximo */
+    margin: 20px auto; /* Centra el elemento */
+    text-align: center; /* Centra el texto */
+}
+
+#fecha-hora h4 {
+    font-size: 18px; /* Tamaño del título */
+    color: #4A6DA7; /* Color del texto del título */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+#fecha-hora p {
+    font-size: 14px; /* Tamaño del texto de la fecha y hora */
+    color: #333; /* Color del texto */
+}
+
+/* Apartado de Fechas Importantes */
+.important-dates {
+    background-color: #ffffff;
+    padding: 20px; /* Espaciado del recuadro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 90%; /* Ajusta el ancho */
+    max-width: 600px; /* Limita el ancho máximo */
+    margin: 20px auto; /* Centra el recuadro */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.important-dates h4 {
+    font-size: 18px; /* Tamaño del título */
+    color: #4A6DA7; /* Color del texto del título */
+    margin-bottom: 15px; /* Espacio debajo del título */
+    margin: 20px auto; /* Centra el elemento */
+    text-align: center; /* Centra el texto */
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between; /* Espacio entre eventos y botones */
+    align-items: center; /* Centra verticalmente los elementos */
+    border: none; /* Quitar bordes si es necesario */
+    padding: 10px 15px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espacio entre eventos */
+    background-color: #f8f9fa; /* Fondo de cada ítem */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.event-details {
+    font-size: 14px; /* Tamaño del texto del evento */
+    color: #333; /* Color del texto del evento */
+}
+
+.btn-calendar {
+    background-color: #4A6DA7; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none;
+    padding: 8px 16px; /* Espaciado del botón */
+    font-size: 14px; /* Tamaño de fuente del botón */
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados del botón */
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-calendar:hover {
+    background-color: #4a6ea78e; /* Color de fondo del botón en hover */
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 20px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu {
+        top: 50px; /* Ajusta la posición del menú en pantallas pequeñas */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        position: relative;
+        left: auto;
+        top: auto;
+    }
+}

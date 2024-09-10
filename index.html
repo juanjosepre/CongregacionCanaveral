@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congregación Cañaveral</title>
+    <!-- Enlace a Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Enlace a tu propio archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="website icon" href="images/logo-redondo.png" type="image/png">
+</head>
+<body>
+    <!-- Navegación y Logo -->
+    <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+        </div>
+        <!-- Nombre centrado -->
+        <a class="navbar-brand mx-auto text-center" href="#">Congregación Cañaveral</a>
+    </nav>
+
+    <!-- Menú Desplegable -->
+    <div class="menu" id="navbarMenu">
+        <ul class="menu-list">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Reunión entre semana</a></li>
+            <li><a href="#">Reunión fin de semana</a></li>
+            <li><a href="#">Acomodadores</a></li>
+            <li><a href="#">Micrófonos Móviles</a></li>
+            <li><a href="#">Salidas a predicar</a></li>
+            <li><a href="#">Lista de grupos</a></li>
+            <li><a href="#">Lista de aseo</a></li>
+            <li><a href="#">Asistencia a las reuniones</a></li>
+            <li><a href="#">Reunión de Zoom</a></li>
+            <li><a href="#">Fotos para descargar</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main>
+    <!-- Apartado de Fechas Importantes -->
+    <section class="container text-center my-4">
+        <div class="important-dates">
+            <h4 class="text-secondary mb-4">Fechas Importantes</h4>
+            <div class="list-group list-group-flush">
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="event-details">
+                        <span>Evento 1 - Fecha</span>
+                    </div>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Evento+1&dates=20240915T120000Z/20240915T130000Z&details=Descripción+del+evento&location=Ubicación+del+evento" target="_blank" class="btn btn-calendar btn-sm">
+                        Agregar al Calendario
+                    </a>
+                </div>
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="event-details">
+                        <span>Evento 2 - Fecha</span>
+                    </div>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Evento+2&dates=20240916T120000Z/20240916T130000Z&details=Descripción+del+evento&location=Ubicación+del+evento" target="_blank" class="btn btn-calendar btn-sm">
+                        Agregar al Calendario
+                    </a>
+                </div>
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="event-details">
+                        <span>Evento 3 - Fecha</span>
+                    </div>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Evento+3&dates=20240917T120000Z/20240917T130000Z&details=Descripción+del+evento&location=Ubicación+del+evento" target="_blank" class="btn btn-calendar btn-sm">
+                        Agregar al Calendario
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+        <!-- Apartado de Hora y Fecha Actual -->
+        <section class="text-center py-3" id="fecha-hora">
+            <h4 class="text-secondary">Fecha & Hora</h4>
+            <p id="hora-actual" class="lead text-dark"></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Congregación Cañaveral</p>
+        <p>Contacto: <a href="mailto:correodecontacto.cc@gmail.com" class="text-white">correodecontacto.cc@gmail.com</a></p>
+    </footer>
+
+    <!-- Scripts de JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
