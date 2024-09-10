@@ -17,11 +17,21 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
-.navbar-brand {
-    color: #ffffff;
-    font-size: 24px;
-    text-align: center;
-    flex-grow: 1;
+/* Estilo para el contenedor de la imagen */
+.navbar-logo {
+    flex-grow: 1; /* Toma el espacio disponible */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    position: absolute;
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición para centrar */
+}
+
+/* Imagen del logo */
+.navbar-logo img {
+    max-width: 200px; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción */
 }
 
 /* Estilos para el menú */
@@ -33,7 +43,7 @@ body {
     width: 40px;
     height: 40px;
     position: absolute;
-    left: 10px;
+    left: 10px; /* Posiciona el menú a la izquierda */
     top: 10px;
 }
 
@@ -154,7 +164,6 @@ body {
     font-size: 18px; /* Tamaño del título */
     color: #4A6DA7; /* Color del texto del título */
     margin-bottom: 15px; /* Espacio debajo del título */
-    margin: 20px auto; /* Centra el elemento */
     text-align: center; /* Centra el texto */
 }
 
